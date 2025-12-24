@@ -116,7 +116,7 @@ image_width = 1242                 # KITTI image width
 image_height = 375                 # KITTI image height
 ```
 
-## 📈Output
+## Output
 
 The pipeline generates:
 - **Video Output**: Annotated video with bounding boxes, track IDs, and distances
@@ -154,7 +154,7 @@ Output saved to: kitti_perception_output.mp4
 - Displays distance information when available
 - Color-coded visualization for different object types
 
-## 🔍 Technical Details
+##  Technical Details
 
 ### Coordinate Transformations
 The pipeline handles multiple coordinate systems:
@@ -168,14 +168,7 @@ Uses KITTI calibration matrices:
 - `Tr_velo_to_cam`: LiDAR to camera transformation
 - `R0_rect`: Rectification matrix
 
-## 🚧 Limitations
-
-- **Dataset Dependency**: Requires KITTI dataset structure
-- **Simple Tracking**: Basic centroid tracking (not Deep SORT)
-- **Limited Classes**: Only cars and pedestrians
-- **No Real-time Input**: Processes pre-recorded sequences
-
-## 🔮 Future Improvements
+##  Future Improvements
 
 - [ ] Implement proper Deep SORT tracking
 - [ ] Add more object classes (cyclists, trucks, etc.)
@@ -184,16 +177,7 @@ Uses KITTI calibration matrices:
 - [ ] 3D bounding box estimation
 - [ ] Integration with ROS/ROS2
 
-## 📄 License
+**Note**: The KITTI dataset is not included in this repository due to its large size (several GB). Please download the dataset separately from the [official KITTI website]([http://www.cvlibs.net/datasets/kitti/eval_tracking.php](https://www.cvlibs.net/datasets/kitti/eval_tracking.php)) and place it in the `dataset/` folder following the required structure.
 
-This project is for educational purposes. Please respect KITTI dataset license terms.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
 
 
